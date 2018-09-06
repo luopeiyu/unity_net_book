@@ -4,6 +4,8 @@
 
 ![封面](docs/img/banner.jpg)
 
+书籍将于近期发布
+
 资源/补充篇/更多学习建议：
 https://luopeiyu.github.io/unity_net_book/
 
