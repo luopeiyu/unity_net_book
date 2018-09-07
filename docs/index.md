@@ -107,10 +107,10 @@ TCP协议至今已有三四十年的历史，当时的设计理念和现今的�
 
 Unity的学习框架总结，分为三个阶段。第一个阶段学基础，第二个阶段对特定项目坚攻，第三个阶段学习团队合作和性能优化。
 
-![pic10.jpg]({{site.baseurl}}/docs/img/pic10.jpg)
+![pic10.jpg](img/pic10.jpg)
 
 
 书籍推荐
 
-![pic11.jpg]({{site.baseurl}}/docs/img/pic11.jpg)
+![pic11.jpg](img/pic11.jpg)
 
