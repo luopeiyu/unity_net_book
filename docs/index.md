@@ -2,11 +2,11 @@
 
 怎样制作**多人网络**对战游戏？怎样解决网络游戏中常见的卡顿、频繁掉线问题？怎样搭建一套可商用的Unity网络框架？本书也许能给读者们些许灵感。
 
-购买书籍 尚未发布
+**购买书籍** 尚未发布
 
-宣传视频 [B站](https://www.bilibili.com/video/av29747258)
+**宣传视频** [B站](https://www.bilibili.com/video/av29747258)
 
-资源下载 [百度网盘](https://pan.baidu.com/s/1XhYKHJYjWTtGAqMb3uBYxQ)  Github尚未上传
+**资源下载** [百度网盘](https://pan.baidu.com/s/1XhYKHJYjWTtGAqMb3uBYxQ)  Github尚未上传
 
 
 
