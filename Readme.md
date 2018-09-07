@@ -16,13 +16,13 @@ https://luopeiyu.github.io/unity_net_book/
 
 ## 示范工程（Final）截图
 
-![pic1.jpg]({{site.baseurl}}/docs/img/pic1.jpg)
+![pic1.jpg](docs/img/pic1.jpg)
 
-![pic2.jpg]({{site.baseurl}}/docs/img/pic2.jpg)
+![pic2.jpg](docs/img/pic2.jpg)
 
-![pic3.jpg]({{site.baseurl}}/docs/img/pic3.jpg)
+![pic3.jpg](docs/img/pic3.jpg)
 
-![pic4.jpg]({{site.baseurl}}/docs/img/pic4.jpg)
+![pic4.jpg](docs/img/pic4.jpg)
 
 
 
