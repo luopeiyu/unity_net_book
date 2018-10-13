@@ -117,5 +117,10 @@ Unity的学习框架总结，分为三个阶段。第一个阶段学基础，第
 
 书籍推荐
 
-![pic11.jpg](img/pic11.jpg)
+![pic11.jpg](img/pic10.jpg)
+
+友情连接
+[宣雨松](https://www.xuanyusong.com/)
+[冯乐乐](https://candycat1992.github.io/)
+[4399校园招聘](http://web.4399.com/campus/)
 
