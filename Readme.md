@@ -4,7 +4,7 @@
 
 ![封面](docs/img/banner.jpg)
 
-书籍将于近期发布
+新华书店、京东、亚马逊、淘宝、当当等主流渠道均有销售
 
 资源/补充篇/更多学习建议：
 https://luopeiyu.github.io/unity_net_book/
