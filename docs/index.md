@@ -6,7 +6,7 @@
 
 **宣传视频** [B站](https://www.bilibili.com/video/av29747258)
 
-**资源下载** [百度网盘](https://pan.baidu.com/s/1XhYKHJYjWTtGAqMb3uBYxQ) 
+**资源下载** [百度网盘](https://pan.baidu.com/s/1XhYKHJYjWTtGAqMb3uBYxQ)    密码：hxuz
 
 
 
@@ -80,11 +80,75 @@ TCP协议至今已有三四十年的历史，当时的设计理念和现今的�
 
 如果读者反映哪些地方看不懂，或者哪些地方有比较大的漏洞，会在这里做补充。
 或者作者会补充一些内容，比如做个摇杆然后在手机上跑。
-
+  
+[设计Unity网络模块,该用异步还是多路复用?](https://zhuanlan.zhihu.com/p/54870575 "设计Unity网络模块,该用异步还是多路复用?")  
 
 ## 【勘误】
 
-书中错漏的地方会在这里说明
+书中错漏的地方会在这里说明  
+
+##### 第一次印刷  
+  
+1.3.2 P9 代码段印刷错误：将`socket.Conn ct("127.0.0.1", 8888);`改为`socket.Connect("127.0.0.1", 8888);  `  
+  
+2.5.1 P36 错别字：将“发生程序”改为“发生错误”  
+  
+3.5.1 P68添加Update函数： `void Update() { NetManager.Update();}`  
+  
+4.3.3 “缓冲区长度大于一条完整数据”一节中，将代码段中buffCount改成bodyLength。具体将  `string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, buffCount);`改为`string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, bodyLength);`  
+  
+4.3.4 将代码段中buffCount改成bodyLength，具体语句改为`string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, bodyLength);`  
+  
+4.5.4 代码中的`if(count == ba.length)`应改为`if(ba.length == 0)`  
+  
+4.6.2 “完整的ByteArray/移动数据”代码段中的CheckAndMoveBytes方法改为
+```csharp
+        //移动数据
+        public void MoveBytes(){
+            if(length > 0) {
+                Array.Copy(bytes, readIdx, bytes, 0, length);
+            } 
+            writeIdx = length;
+            readIdx = 0;
+        } 
+``` 
+  
+4.6.2 “完整的ByteArray/读写功能”Read方法中Array.Copy函数改为`Array.Copy(bytes, readIdx, bs, offset, count);`  
+  
+4.6.3 P131 代码段中将`if(readBuff.length < bodyLength)`改为`if(readBuff.length < bodyLength + 2)`  
+  
+6.5.6 “协议名的编码解码”  代码段添加一行if(len <= 0)的判断。具体如下:
+```csharp
+//解码协议名（2字节长度+字符串）
+    public static string DecodeName(byte[] bytes, int offset, out int count){
+        count = 0;
+        //必须大于2字节
+        if(offset + 2 > bytes.Length){
+            return "";
+        }
+        //读取长度
+        Int16 len = (Int16)((bytes[offset+1] << 8 )| bytes[offset] );
+		if(len <= 0){
+			return "";
+		}
+        ……
+    } 
+```  
+  
+  6.8.4 代码段中将`if(readBuff.length < bodyLength)`改为`if(readBuff.length < bodyLength + 2)`  
+  
+  9.4.1 P282 代码段Init函数的最后一行应该是layer而不是ayer。  
+  
+  9.6.2 P298 OnShow和OnClose应监听MsgRegister而不是MsgLogin协议。  
+  ```csharp
+NetManager.AddMsgListener("MsgRegister", OnMsgRegister);  
+NetManager.RemoveMsgListener("MsgRegister", OnMsgRegister);  
+```
+  
+  12.7.2 单词拼写错误，代码段中的“forcastQuat”应改为“forecastQuat”  
+  
+  
+
 
 ## 【关于作者】
 
