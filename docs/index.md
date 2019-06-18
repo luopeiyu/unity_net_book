@@ -89,6 +89,8 @@ TCP协议至今已有三四十年的历史，当时的设计理念和现今的�
 
 ##### 第一次印刷  
   
+1.1 P2 图1-3印刷错误，将图中右侧的 ③客户端 改为 ③服务端  
+  
 1.3.2 P9 代码段印刷错误：将`socket.Conn ct("127.0.0.1", 8888);`改为`socket.Connect("127.0.0.1", 8888);  `  
   
 2.5.1 P36 错别字：将“发生程序”改为“发生错误”  
@@ -96,6 +98,8 @@ TCP协议至今已有三四十年的历史，当时的设计理念和现今的�
 3.5.1 P68添加Update函数： `void Update() { NetManager.Update();}`  
   
 4.3.3 “缓冲区长度大于一条完整数据”一节中，将代码段中buffCount改成bodyLength。具体将  `string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, buffCount);`改为`string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, bodyLength);`  
+  
+4.3.3 P102 图4-17 图片印刷错误。只看上半部分两条缓冲区的图片即可。  
   
 4.3.4 将代码段中buffCount改成bodyLength，具体语句改为`string s = System.Text.Encoding.UTF8.GetString(readBuff, 2, bodyLength);`  
   
@@ -138,6 +142,8 @@ TCP协议至今已有三四十年的历史，当时的设计理念和现今的�
   6.8.4 代码段中将`if(readBuff.length < bodyLength)`改为`if(readBuff.length < bodyLength + 2)`  
   
   9.4.1 P282 代码段Init函数的最后一行应该是layer而不是ayer。  
+  
+  9.4.1 P281 错别字，“层级管理”第1段第2行的“分别有Layer.Panel和Layer.Panel两项”改为“分别有Layer.Panel和Layer.Tip两项”
   
   9.6.2 P298 OnShow和OnClose应监听MsgRegister而不是MsgLogin协议。  
   ```csharp
