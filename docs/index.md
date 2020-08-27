@@ -153,7 +153,54 @@ NetManager.RemoveMsgListener("MsgRegister", OnMsgRegister);
   
   12.7.2 单词拼写错误，代码段中的“forcastQuat”应改为“forecastQuat”  
   
+##### 第二次和第三次印刷  
+
+  2.6.2 P42  “调用Select，程序中设置超时时间为1秒，若1秒内……”应改为“毫秒”
   
+  4.6.2 P127 代码ReadInt16()和ReadInt32()改为
+    ```csharp
+    //读取Int16
+    public Int16 ReadInt16(){
+        if(length < 2) return 0;
+        Int16 ret = (Int16)((bytes[readIdx+1] << 8) | bytes[readIdx]);
+    readIdx += 2;
+        CheckAndMoveBytes();
+        return ret;
+    }
+
+    //读取Int32
+    public Int32 ReadInt32(){
+        if(length < 4) return 0;
+        Int32 ret = (Int32)( (bytes[readIdx+3] << 24)|
+                            (bytes[readIdx+2] << 16)|
+			    (bytes[readIdx+1] << 8) | 
+			      bytes[readIdx] );
+        readIdx += 4;
+        CheckAndMoveBytes();
+        return ret;
+    }
+  ```
+  7.3.7 P200 代码段中OnReceiveData前几行代码改为
+  ```csharp
+    //数据处理
+    public static void OnReceiveData(ClientState state){
+        ByteArray readBuff = state.readBuff;
+        byte[] bytes = readBuff.bytes;
+        //消息长度
+        if(readBuff.length <= 2) {
+            return;
+        }
+        Int16 bodyLength = (Int16)((bytes[readIdx+1] << 8 )| bytes[readIdx]);
+        //消息体
+        if(readBuff.length < bodyLength +2){
+            return;
+        }
+        readBuff.readIdx+=2; 
+        //解析协议名
+	......
+
+ 
+
 
 
 ## 【关于作者】
