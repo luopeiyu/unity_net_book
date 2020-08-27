@@ -158,7 +158,7 @@ NetManager.RemoveMsgListener("MsgRegister", OnMsgRegister);
   2.6.2 P42  “调用Select，程序中设置超时时间为1秒，若1秒内……”应改为“毫秒”
   
   4.6.2 P127 代码ReadInt16()和ReadInt32()改为
-    ```csharp
+```csharp
     //读取Int16
     public Int16 ReadInt16(){
         if(length < 2) return 0;
@@ -179,7 +179,7 @@ NetManager.RemoveMsgListener("MsgRegister", OnMsgRegister);
         CheckAndMoveBytes();
         return ret;
     }
-  ```
+```  
   7.3.7 P200 代码段中OnReceiveData前几行代码改为
   ```csharp
     //数据处理
@@ -198,10 +198,8 @@ NetManager.RemoveMsgListener("MsgRegister", OnMsgRegister);
         readBuff.readIdx+=2; 
         //解析协议名
 	......
-
+```  
  
-
-
 
 ## 【关于作者】
 
